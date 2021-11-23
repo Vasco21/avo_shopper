@@ -6,11 +6,20 @@ const Pool = pg.Pool;
 // require('dotenv').config()
 
 
+// should we use a SSL connection
+let useSSL = false;
+let local = process.env.LOCAL || false;
+if (process.env.DATABASE_URL && !local){
+    useSSL = true;
+}
+// which db connection to use
+
 const connectionString = process.env.DATABASE_URL || 'postgresql://coder:pg123@localhost:5432/avo_shopper';
 
 const pool = new Pool({
-    connectionString
-});
+    connectionString,
+    ssl : useSSL
+  });
 
 const shopping = shop(pool);
 
