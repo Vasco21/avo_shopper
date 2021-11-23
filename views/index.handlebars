@@ -1,1 +1,26 @@
 <h2>Best deals</h2>
+
+<form action="/action_Shop" method="post">
+  <label for="shop">Choose a shop:</label>
+  <select name="shop" id="shop">
+    <option value="Fruit & Veg City">Fruit & Veg City</option>
+    <option value="Tsjekkers">Tsjekkers</option>
+    <option value="Shopryte">Shopryte</option>
+    <option value="Pick n Play">Pick n Play</option>
+    <option value="Fruit lovers">Fruit lovers</option>
+  </select>
+  <div>
+        <label class="la">
+            <h4>price</h4><input type="number" value="" name="price" class="shopping" placeholder="Type in price here!">
+            <h4>qty</h4><input type="number" value="" name="qty" class="shopping" placeholder="Type in qty here!">
+        </label>
+    </div>
+    {{!-- <br>
+    <button class="resetButton" type="submit">submit</button> --}}
+
+<div>
+  <br><br>
+  <input type="submit" value="Submit">
+  <a href="/listshop" >listshop</a>
+</form>
+
