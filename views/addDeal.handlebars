@@ -1,0 +1,26 @@
+<div class="content">
+    <h2 class="content-head is-center">Add New Deal</h2>
+
+    <div class="pure-g">
+        <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
+            <form class="pure-form pure-form-stacked" action="/newDeal" method="post">
+                <fieldset>
+                    <div>
+                        <label for="">Choose Shop Name:</label>
+                        <select name="shops">
+                            {{#each shops}}
+                            <option value="{{this.id}}">{{this.name}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    <label for="dealQty">Quantity:</label>
+                    <input id="name" type="number" name="dealQty" placeholder="Enter Quantity">
+
+
+                    <label for="dealPrice">Price:</label>
+                    <input id="email" type="number" name="dealPrice" placeholder="Enter Quantity">
+
+                    <button type="submit" class="pure-button">Add Deal</button>
+                </fieldset>
+            </form>
+        </div>

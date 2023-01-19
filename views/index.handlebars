@@ -1,26 +1,33 @@
-<h2>Best deals</h2>
+<div class="content-wrapper">
+    <div class="content">
+        <h2 class="content-head is-center">AVOCADO TOP DEALS</h2>
 
-<form action="/action_Shop" method="post">
-  <label for="shop">Choose a shop:</label>
-  <select name="shop" id="shop">
-    <option value="Fruit & Veg City">Fruit & Veg City</option>
-    <option value="Tsjekkers">Tsjekkers</option>
-    <option value="Shopryte">Shopryte</option>
-    <option value="Pick n Play">Pick n Play</option>
-    <option value="Fruit lovers">Fruit lovers</option>
-  </select>
-  <div>
-        <label class="la">
-            <h4>price</h4><input type="number" value="" name="price" class="shopping" placeholder="Type in price here!">
-            <h4>qty</h4><input type="number" value="" name="qty" class="shopping" placeholder="Type in qty here!">
-        </label>
+        <div class="pure-g">
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                {{#each topDeal}}
+                <h3 class="content-subhead">
+                    <i class="fa fa-shopping-cart"></i>
+                    {{this.shop_name}}
+                    <img src="AVOCADO{{@index}}.jpeg" alt="">
+                </h3>
+                <p>
+                    {{this.qty}} for R{{this.price}}
+                </p>
+                {{/each}}
+            </div>
+        </div>
+
+        <div class="pure-g">
+            <h2>{{name}}</h2>
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                {{#each avoDeals}}
+                <h3 class="content-subhead">
+                    <i class="fa fa-shopping-cart"></i>
+                    {{this.qty}} for R{{price}}
+                </h3>
+                {{/each}}
+
+            </div>
+        </div>
     </div>
-    {{!-- <br>
-    <button class="resetButton" type="submit">submit</button> --}}
-
-<div>
-  <br><br>
-  <input type="submit" value="Submit">
-  <a href="/listshop" >listshop</a>
-</form>
-
+</div>

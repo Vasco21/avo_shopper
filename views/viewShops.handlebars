@@ -1,0 +1,23 @@
+<div class="content-wrapper">
+	<div class="content">
+		<h2 class="content-head is-center">AVOCADO STORES & DEALS</h2>
+
+		<div class="pure-g">
+			<div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+				{{#each shopList}}
+				<h3 class="content-subhead">
+					<i class="fa fa-minus"></i>
+					<a href="/show/{{this.name}}/{{@index}}">{{this.name}}</a>
+				</h3>
+				{{/each}}
+			</div>
+		</div>
+		<div>
+			<div>
+				<p>
+					<a href="addShops" class="pure-button pure-button-primary">ADD NEW SHOP</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
